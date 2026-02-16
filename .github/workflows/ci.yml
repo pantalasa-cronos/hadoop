@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build:
+    runs-on: cronos
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Check Java version
+        run: java -version
+      - name: Maven version
+        run: mvn --version
+      - name: Maven validate
+        run: mvn validate -pl hadoop-common -am -DskipTests -q

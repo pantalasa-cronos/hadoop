@@ -25,5 +25,5 @@ jobs:
         run: java -version
       - name: Maven version
         run: mvn --version
-      - name: Maven validate
-        run: mvn validate -DskipTests -q || true
+      - name: Maven test (hadoop-common only, with JaCoCo)
+        run: mvn test -pl hadoop-common -am -DskipTests=false -Djacoco.skip=false -q || true

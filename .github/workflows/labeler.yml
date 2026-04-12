@@ -19,22 +19,20 @@
 
 name: "Pull Request Labeler"
 on: pull_request_target
-
 permissions:
-  contents: read
-  pull-requests: write
-
+    contents: read
+    pull-requests: write
 jobs:
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          sparse-checkout: |
-            .github
-      - uses: actions/labeler@v4.3.0
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          sync-labels: true
-          configuration-path: .github/labeler.yml
-          dot: true
+    triage:
+        runs-on: localdev-e2e-test-1775994700-main
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                sparse-checkout: |
+                    .github
+            - uses: actions/labeler@v4.3.0
+              with:
+                repo-token: ${{ secrets.GITHUB_TOKEN }}
+                sync-labels: true
+                configuration-path: .github/labeler.yml
+                dot: true

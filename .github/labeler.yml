@@ -20,38 +20,38 @@
 # Pull Request Labeler Github Action Configuration: https://github.com/marketplace/actions/labeler
 
 trunk:
-  - '**'
+    - '**'
 INFRA:
-  - .asf.yaml
-  - .gitattributes
-  - .gitignore
-  - .github/**
-  - dev-support/**
-  - start-build-env.sh
+    - .asf.yaml
+    - .gitattributes
+    - .gitignore
+    - .github/**
+    - dev-support/**
+    - start-build-env.sh
 BUILD:
-  - '**/pom.xml'
+    - '**/pom.xml'
 COMMON:
-  - hadoop-common-project/**
+    - hadoop-common-project/**
 HDFS:
-  - hadoop-hdfs-project/**
+    - hadoop-hdfs-project/**
 RBF:
-  - hadoop-hdfs-project/hadoop-hdfs-rbf/**
+    - hadoop-hdfs-project/hadoop-hdfs-rbf/**
 NATIVE:
-  - hadoop-hdfs-project/hadoop-hdfs-native-client/**
-  - hadoop-common-project/hadoop-common/src/main/native/**
+    - hadoop-hdfs-project/hadoop-hdfs-native-client/**
+    - hadoop-common-project/hadoop-common/src/main/native/**
 YARN:
-  - hadoop-yarn-project/**
+    - hadoop-yarn-project/**
 MAPREDUCE:
-  - hadoop-mapreduce-project/**
+    - hadoop-mapreduce-project/**
 DISTCP:
-  - hadoop-tools/hadoop-distcp/**
+    - hadoop-tools/hadoop-distcp/**
 TOOLS:
-  - hadoop-tools/**
+    - hadoop-tools/**
 AWS:
-  - hadoop-tools/hadoop-aws/**
+    - hadoop-tools/hadoop-aws/**
 ABFS:
-  - hadoop-tools/hadoop-azure/**
+    - hadoop-tools/hadoop-azure/**
 DYNAMOMETER:
-  - hadoop-tools/hadoop-dynamometer/**
+    - hadoop-tools/hadoop-dynamometer/**
 MAVEN-PLUGINS:
-  - hadoop-maven-plugins/**
+    - hadoop-maven-plugins/**
